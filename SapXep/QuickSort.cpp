@@ -1,13 +1,13 @@
 #include<conio.h>
 #include<iostream>
-#include<bits/stdc++.h>
+
 
 using namespace std;
 
 int patition(int a[],int l,int r)
 {
     int pivot = a[r];
-    int i=l-1;
+    int i=l-1;  
     for (int j=l;j<r;j++){
         if(a[j]<=pivot){
             ++i;
