@@ -7,14 +7,14 @@ using namespace std;
 int insertion(int a[],int n)
 {
     for(int i=1;i<n;i++){
-        int x = a[i];
+        int last = a[i];
         int j = i-1;
-        while (j >=0 && x < a[j] )
+        while (j >=0 && last < a[j] )
         {
             a[j + 1]=a[j];
             --j;
         }
-        a[j + 1] = x;
+        a[j + 1] = last;
     }
     return 0;
 }

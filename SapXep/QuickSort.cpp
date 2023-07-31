@@ -23,16 +23,43 @@ int patition(int a[],int l,int r)
 
 int patition2(int a[],int l,int r)
 {
-    
+    int pivot = a[l];
+    int i=l-1,j=r+1;
+    while(1){
+        do{
+            ++i;
+        }while(a[i]<pivot);
+        do{
+            --j;
+        }while (a[j]>pivot);
+        if(i<j){
+            swap(a[i],a[j]);
+            
+        }else return j;
+        
+        
+    }
 }
 
-void quicksort(int a[],int l,int r)
+void quicksort1(int a[],int l,int r)
 {
     if(l>=r) return ;
     int p = patition(a,l,r);
-    quicksort(a,l,p-1);
-    quicksort(a,p+1,r);
+    quicksort1(a,l,p-1);
+    quicksort1(a,p+1,r);
 }
+
+void quickSort2(int a[],int l, int r)
+{
+    if(l>=r){
+        return;
+    }
+    int p = patition2(a,l,r);
+    quickSort2(a,l,p);
+    quickSort2(a,p+1,r);
+}
+
+
 
 int main(){
     int a[1000],n;cin>> n;
@@ -43,7 +70,7 @@ int main(){
 
 
 
-    quicksort(a,0,n-1);
+    quickSort2(a,0,n-1);
     for (int i=0;i<n;i++){
         cout << a[i]<< " ";
     }
