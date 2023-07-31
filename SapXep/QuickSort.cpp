@@ -8,7 +8,7 @@ int patition(int a[],int l,int r)
 {
     int pivot = a[r];
     int i=l-1;
-    for (int j=l;j<r;i++){
+    for (int j=l;j<r;j++){
         if(a[j]<=pivot){
             ++i;
             swap(a[i],a[j]);
@@ -31,10 +31,13 @@ void quicksort(int a[],int l,int r)
 
 int main(){
     int a[1000],n;cin>> n;
-    srand(time(NULL));
+
     for (int i=0;i<n;i++){
-        a[i]=rand()%1000;
+        cin >> a[i];
     }
+
+
+
     quicksort(a,0,n-1);
     for (int i=0;i<n;i++){
         cout << a[i]<< " ";
