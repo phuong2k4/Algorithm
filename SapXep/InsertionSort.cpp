@@ -1,5 +1,4 @@
 #include<algorithm>
-#include<bits/stdc++.h>
 #include<conio.h>
 #include<iostream>
 

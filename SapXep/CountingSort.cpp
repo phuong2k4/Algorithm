@@ -1,4 +1,4 @@
-#include<bits/stdc++.h>
+
 #include<conio.h>
 #include<algorithm>
 #include<iostream>

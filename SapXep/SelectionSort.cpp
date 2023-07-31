@@ -1,6 +1,7 @@
-#include<bits/stdc++.h>
+
 #include<algorithm>
 #include<conio.h>
+#include<iostream>
 
 using namespace std;
 

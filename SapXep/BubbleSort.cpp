@@ -1,8 +1,9 @@
 #include<algorithm>
-#include<bits/stdc++.h>
 #include<conio.h>
+#include<iostream>
 
 using namespace std;
+
 int BubleSort(int a[],int n){
     int temp=0;
     for(int i=0;i<n;i++){

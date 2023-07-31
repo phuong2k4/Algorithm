@@ -21,6 +21,11 @@ int patition(int a[],int l,int r)
     
 }
 
+int patition2(int a[],int l,int r)
+{
+    
+}
+
 void quicksort(int a[],int l,int r)
 {
     if(l>=r) return ;
