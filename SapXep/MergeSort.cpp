@@ -10,10 +10,10 @@ using namespace std;
 
 void merge(int a[],int l,int m,int r)
 {
-    vector<int> x(a+l,a+m+1);
+    vector<int> x(a+l,a+m+1);//tao mang linh hoat
     vector<int> y(a+m+1,a+r+1);
     int i = 0 , j = 0;
-    while(i<x.size()&&j<y.size()){
+    while(i<x.size()&&j<y.size()){//tu 0 den cac gia tri trong danh sach con
         if (x[i]<=y[j])
         {
             a[l]=x[i]; ++l;++i;
