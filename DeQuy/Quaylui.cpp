@@ -6,12 +6,14 @@
 using namespace std;
 
 int n,X[100];
-int inkq(){
+
+void inkq(){
     for(int i=1;i<=n;i++){
         cout << X[i];
     }
     cout << endl;
 }
+
 void Try(int i){
      for(int j=0;j<=1;j++){
         X[i]=j;
