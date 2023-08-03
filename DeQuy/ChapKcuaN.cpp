@@ -6,7 +6,7 @@ using namespace std;
 
 int n;int a[100];int k;
 
-int inkq(){
+void inkq(){
     for(int i=1;i<=k;i++){
         cout << a[i];
 
