@@ -21,6 +21,14 @@ int patition(int a[],int l,int r)
     
 }
 
+void quicksort1(int a[],int l,int r)
+{
+    if(l>=r) return ;
+    int p = patition(a,l,r);
+    quicksort1(a,l,p-1);
+    quicksort1(a,p+1,r);
+}
+
 int patition2(int a[],int l,int r)
 {
     int pivot = a[l];
@@ -39,14 +47,6 @@ int patition2(int a[],int l,int r)
         
         
     }
-}
-
-void quicksort1(int a[],int l,int r)
-{
-    if(l>=r) return ;
-    int p = patition(a,l,r);
-    quicksort1(a,l,p-1);
-    quicksort1(a,p+1,r);
 }
 
 void quickSort2(int a[],int l, int r)
