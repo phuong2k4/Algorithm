@@ -1,4 +1,4 @@
-// tim kiem nhi phan tren mang co so
+// tim kiem tuyen tinh tren mang co so
 #include<iostream>
 #include<cstring>
 
