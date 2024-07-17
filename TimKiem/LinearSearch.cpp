@@ -16,7 +16,7 @@ int main(int agrc, char** argv[]){
     int n,m;
     cin >> n >> m;
     int a[n];
-    input(a,n);
+    inArr(a,n);
     if(linearSearch(a,n,m)){
         cout << "Yes";
     }else{
