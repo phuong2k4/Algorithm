@@ -22,7 +22,7 @@ int main(){
     for (int i = 0;i<n;i++){
         cin >> a[i];
     }
-    //call algorihtm
+    //call algorithm
     insertionSort(a,n);
     //print result
     for(int i=0;i<n;i++){

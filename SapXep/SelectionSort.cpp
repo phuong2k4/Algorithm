@@ -1,6 +1,3 @@
-
-#include<algorithm>
-#include<conio.h>
 #include<iostream>
 
 using namespace std;
@@ -23,11 +20,11 @@ int main(){
     for(int i=0;i<n;i++){
         cin >> a[i];
     }
+    //call algorithm
     selection(a,n);
+    //print result
     for (int i =0;i<n;i++){
         cout << a[i]<<" ";
-
     }
-    getch();
     return 0;
 }
