@@ -1,22 +1,19 @@
-#include<algorithm>
-#include<conio.h>
 #include<iostream>
 
 using namespace std;
 
-int insertion(int a[],int n)
+void insertionSort(int a[],int n)
 {
     for(int i=1;i<n;i++){
-        int last = a[i];
+        int flag = a[i];
         int j = i-1;
-        while (j >=0 && last < a[j] )
+        while (j >=0 && flag < a[j] )
         {
             a[j + 1]=a[j];
             --j;
         }
-        a[j + 1] = last;
+        a[j + 1] = flag;
     }
-    return 0;
 }
 
 int main(){
@@ -25,13 +22,11 @@ int main(){
     for (int i = 0;i<n;i++){
         cin >> a[i];
     }
-    insertion(a,n);
+    //call algorihtm
+    insertionSort(a,n);
+    //print result
     for(int i=0;i<n;i++){
         cout << a[i] << " ";
-
     }
-    
-    getch();
-    return 0; 
-
+    return 0;
 }
