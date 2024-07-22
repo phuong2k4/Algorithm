@@ -1,22 +1,23 @@
 #include<algorithm>
-#include<conio.h>
 #include<iostream>
 
 using namespace std;
 
-int BubleSort(int a[],int n){
-    int temp=0;
+void BubleSort(int a[],int n){
     for(int i=0;i<n;i++){
+        bool swap = false;
         for (int j=i+1;j<n;j++){
             if(a[i]>a[j]){
-                temp=a[i];
+                int temp=a[i];
                 a[i]=a[j];
                 a[j]=temp;
-
+                swap = true;
             }
         }
+        if(!swap){
+            break;
+        }
     }
-    return 0;
 }
 
 int main(){
@@ -26,12 +27,11 @@ int main(){
     for(int i=0;i<n;i++){
         cin>>a[i];
     }
+
     BubleSort(a,n);
+
     for (int i=0;i<n;i++){
         cout << a[i] <<" ";
     }
-    getch();
     return 0;
-
-
 }
