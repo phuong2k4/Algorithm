@@ -1,6 +1,5 @@
 #include<vector>
 #include<iostream>
- #include<conio.h>
 #include<algorithm>
 
 using namespace std;
@@ -17,11 +16,9 @@ void merge(int a[],int l,int m,int r)
         if (x[i]<=y[j])
         {
             a[l]=x[i]; ++l;++i;
-
         }
         else{
             a[l]=y[j]; ++l ; ++j;
-
         }
         
     }
@@ -31,7 +28,6 @@ void merge(int a[],int l,int m,int r)
     while (j<y.size()){
         a[l]=y[j]; ++l;++j;
     }
-  
 }
 void mergesort(int a[],int l,int r){
     if(l>=r){
@@ -44,18 +40,16 @@ void mergesort(int a[],int l,int r){
 }
 
 int main(){
-    int n=100;
-    int a[100];
-    srand(time(NULL));
+    int n;
+    cin >> n;
+    int *a = new int[n];
     for (int i=0;i<n;i++)
     {
-        a[i]=rand()%1000;
+        cin >> a[i];
     }
     mergesort(a,0,n-1);
-    for(int x: a){
-        cout << x << " ";
-
+    for(int i = 0;i<n;i++){
+        cout << a[i] << " ";
     }
-    getch();
     return 0;
 }
