@@ -39,6 +39,24 @@ void mergesort(int a[],int l,int r){
     merge(a,l,m,r);
 }
 
+
+void mergeSortV2(int x[],int m, int y[],int n,int z[]){
+    int i = 0,j=0,k = 0;
+    while(i < m && j < n){
+        if(x[i] < y[j]){
+            z[k] = x[i]; k++;i++;
+        }else{
+            z[k] = y[j]; k++;j++;
+        }
+    }
+    while(i<m){
+        z[k] = x[i]; k++;i++;
+    }
+    while(j<n){
+        z[k] = y[j]; k++;j++;
+    }
+}
+
 int main(){
     int n;
     cin >> n;
